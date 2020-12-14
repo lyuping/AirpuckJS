@@ -230,7 +230,7 @@ const Airpuck = {
                     const xhr = new XHR()
                     xhr.POST(record, _ => {
                         _props.records[Object.keys(_props.records).length] = xhr.response // update the local store with the new record
-                        if (callback) callback()
+                        if (callback) callback(xhr.response)
                     }, _ => console.log('add error'))
                 },
 
